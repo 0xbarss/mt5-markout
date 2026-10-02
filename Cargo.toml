@@ -1,0 +1,15 @@
+[package]
+name = "mt5-markout"
+version = "0.1.0"
+edition = "2021"
+description = "Live real-time MetaTrader 5 market data visualizer and streaming bridge for markout"
+
+[dependencies]
+markout = { path = "../markout" }
+mt5-bridge = { path = "../mt5-bridge", features = ["async"] }
+tokio = { version = "1", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+clap = { version = "4", features = ["derive", "env"] }
+chrono = { version = "0.4" }
+anyhow = "1"
